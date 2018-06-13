@@ -6,7 +6,7 @@ I did this because I don't feel like re-writing it in other languages and micros
 
 ## Deploy
 
-It's a normal nodejs microserver and/or dockerfile, so run something like (making sure to change your service name in the package.json)
+It's a normal nodejs microserver and/or dockerfile, so run something like (making sure to change your username in the package.json)
 
 ```bash
 yarn run build
@@ -41,7 +41,7 @@ Output:
 Input:
 ```json
 {
-	"id": "dozzod-doznec"
+  "id": "dozzod-doznec"
 }
 ```
 
