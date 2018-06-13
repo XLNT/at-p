@@ -1,3 +1,4 @@
+import withApiAuth from '@xlnt/micro-api-auth'
 import { IncomingMessage, ServerResponse } from 'http'
 import {
   json,
@@ -25,12 +26,12 @@ const convertHandler = (
   send(res, 200, { ids: ids.map(fn) })
 }
 
-const root = router(
+const root = withApiAuth()(router(
   post('/isAddress', isAddress),
   ...Object.keys(toObFns)
     .map((k) =>
       post(`/to/${k}`, convertHandler(toObFns[k])),
     ),
-)
+))
 
 export default root

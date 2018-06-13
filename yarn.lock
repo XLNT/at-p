@@ -6,6 +6,10 @@
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.1.1.tgz#ca39d8607fa1fcb146b0530420b93f1dd4802f6c"
 
+"@xlnt/micro-api-auth@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@xlnt/micro-api-auth/-/micro-api-auth-1.0.0.tgz#c4bb74b1775911a6251789face9e1b5d2c5d3c9c"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
