@@ -1,4 +1,7 @@
 {
+  "env": {
+    "API_KEYS": "@kata-api-keys"
+  },
   "engines": {
     "node": "9.11.1"
   }
