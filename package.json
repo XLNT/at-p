@@ -1,0 +1,47 @@
+{
+  "name": "@xlnt/at-p",
+  "version": "0.0.1",
+  "description": "Sign and verify signatures using web3 as a microservice.",
+  "scripts": {
+    "start": "micro lib/index.js",
+    "dev": "concurrently 'yarn run watch-ts' 'micro-dev lib/index.js'",
+    "build": "yarn run build-ts",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint --project .",
+    "docker-build": "docker build -t shrugs/at-p:latest .",
+    "docker-push": "docker push shrugs/at-p:latest",
+    "deploy": "yarn run build && yarn run docker-build && yarn run docker-push"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": "https://github.com/XLNT/at-p",
+  "keywords": [
+    "ethereum"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/XLNT/at-p/issues"
+  },
+  "homepage": "https://github.com/XLNT/at-p#readme",
+  "peerDependencies": {},
+  "dependencies": {
+    "eth-lib": "^0.2.8",
+    "micro": "^9.3.2",
+    "microrouter": "^3.1.3",
+    "urbit-ob": "^1.0.0",
+    "web3-utils": "^1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "@types/node": "^10.1.1",
+    "concurrently": "^3.5.1",
+    "micro-dev": "^3.0.0",
+    "ts-node": "^6.1.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
