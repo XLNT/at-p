@@ -11,7 +11,7 @@ It's a normal nodejs microserver and/or dockerfile, so run something like (makin
 ```bash
 yarn run build
 yarn run docker-build
-docker run -e "PRIVATE_KEY=0xabcd" -e "PORT=3002" -p 3002:3002 shrugs/at-p:latest
+docker run -p 3000:3000 shrugs/at-p:latest
 ```
 
 ## Usage
