@@ -7,8 +7,6 @@ import { post, router } from 'microrouter'
 
 import atP = require('urbit-ob')
 
-const PORT = process.env.PORT || 3000
-
 const toObFns: { [_: string]: (arg: any) => any } = {
   galaxy: atP.toGalaxyName,
   star: atP.toStarName,
