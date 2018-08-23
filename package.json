@@ -1,18 +1,22 @@
 {
   "name": "@xlnt/at-p",
   "version": "0.0.1",
-  "description": "Sign and verify signatures using web3 as a microservice.",
+  "description": "Generate at-p encodings of numbers as a microservice.",
   "scripts": {
     "start": "micro lib/index.js",
     "dev": "concurrently 'yarn run watch-ts' 'yarn run micro-dev'",
-    "micro-dev": "micro-dev lib/index.js -p 3003",
+    "micro-dev": "micro-dev lib/index.js -p 3002",
     "build": "yarn run build-ts",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "tslint": "tslint --project .",
-    "docker-build": "docker build -t shrugs/at-p:latest .",
-    "docker-push": "docker push shrugs/at-p:latest",
-    "deploy": "yarn run build && yarn run docker-build && yarn run docker-push"
+    "docker:build": "docker build -t shrugs/at-p:latest .",
+    "docker:push": "docker push shrugs/at-p:latest",
+    "deploy": "yarn run build && yarn run docker-build && yarn run docker-push",
+    "now": "now",
+    "now:alias": "now alias",
+    "now:clean": "now rm @xlnt/at-p --safe --yes",
+    "now:deploy": "yarn run build && yarn run now && yarn run now:alias && yarn run now:clean"
   },
   "files": [
     "lib"
