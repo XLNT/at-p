@@ -5,7 +5,7 @@
   "scripts": {
     "start": "micro lib/index.js",
     "dev": "concurrently 'yarn run watch-ts' 'yarn run micro-dev'",
-    "micro-dev": "micro-dev lib/index.js -p 3002",
+    "micro-dev": "micro-dev lib/index.js -p 3003",
     "build": "yarn run build-ts",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
